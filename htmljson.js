@@ -50,10 +50,11 @@ $(document).ready(function() {
 					data: jsoncompra,
 					success:function(json){
 							console.log(json);
-								for (var key in json.root.site["mis-compras"]["items"]) {
-							 		$("#jsonrecibi").append('<tr>' + '<td>' + json.root.site["mis-compras"]["items"][key]["cantidad"] + '</td>'
-							 		+ '<td>' + json.root.site["mis-compras"]["items"][key]["descripcion"] + '</td>'
-							 		+ '<td>' + json.root.site["mis-compras"]["items"][key]["costo"] + '</td>'
+							var objeto = json.root.site["mis-compras"]["items"];
+								for (var key in objeto) {
+							 		$("#jsonrecibi").append('<tr>' + '<td>' + objeto[key]["cantidad"] + '</td>'
+							 		+ '<td>' + objeto[key]["descripcion"] + '</td>'
+							 		+ '<td>' + objeto[key]["costo"] + '</td>'
 							 		+ '<td class="remover">Eliminar</td>'
 							 			+ '</tr>');
 							 	}

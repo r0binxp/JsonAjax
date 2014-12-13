@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<style>
+#compra li {
+	display: inline-block;
+	margin: 30px;
+}
+td{
+	padding: 5px 20px;
+}
+.remover {
+	color: red;
+	cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+	<h1>COMPRA EN LA WEB</h1>
+		<ul id="compra">
+			<li><h4>Hosting Web</h4><input id="compraWeb" type="submit" value="Comprar Web" name="comprarweb"/></li>
+			<li><h4>Comprar Emails</h4><input type="submit" value="Comprar Envios" name="comprarmail"/></li>
+			<li><h4>Comprar Dominio</h4><input type="text" id="nombreDominio" name="dominio"/><input type="submit" id="compraDom" value="Comprar .com" name="comprarcom"/></li>
+		</ul>
+		<div id="">
+			<table id="jsonrecibi">
+			<tr>
+				<td>Cantidad</td>
+				<td>Descripcion</td>
+				<td>Precio</td>
+				<td></td>
+			</tr>
+			</table>
+		</div>
+
+
+<script src="htmljson.js"></script>
+</body>
+</html>

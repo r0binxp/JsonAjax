@@ -1,6 +1,4 @@
-var datos;
 $(document).ready(function() {
-	var datos;
 	var periodo = [12];
 	var plan = ["plan_inicio_2014"];
 	var so = ["L"];
@@ -9,8 +7,7 @@ $(document).ready(function() {
 	var urlcompra = {
 		webhosting: 'http://donweb.com/ajax-mis-compras.php?jsoncallback=?',
 		email:'',
-		dominio:'http://donweb.com/ajax-check-domain-bulk.php?jsoncallback=?'
-			        };
+		dominio:'http://donweb.com/ajax-check-domain-bulk.php?jsoncallback=?'};
 	var compraWeb = {
 						pais:"ar",
 						origen: "web-hosting",
@@ -40,23 +37,12 @@ $(document).ready(function() {
   		$(parent).remove();
 	}); 	
 
-	$.ajax({
-					url: urlcompra,
-					crossDomain: true,
-					dataType: 'JSONP',
-					data: compraWeb,
-					success:function(json){
-						var objeto = json.root.site["mis-compras"];
-						$('')
-					}
-	});				
+		
 
 	function compra(url, params)
 		{
 			var jsoncompra = params;
 			var urlc = url;
-			
-
 			$.ajax({
 					url: urlc,
 					crossDomain: true,
@@ -71,15 +57,9 @@ $(document).ready(function() {
 							 		+ '<td class="remover">Eliminar</td>'
 							 			+ '</tr>');
 							 	}
-							 datos = json;
-							 return
-
-					}
+						    }
 			});
 		};
-
-console.log("ahora voy a tirar la variable datos");
-console.log(datos);
 
 });
 
